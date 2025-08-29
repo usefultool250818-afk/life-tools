@@ -1,3 +1,0 @@
-/* 必要なら Tailwind を後で導入します。今は最小でOK */
-html, body { margin: 0; padding: 0; font-family: system-ui, sans-serif; }
-a { text-decoration: none; }

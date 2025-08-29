@@ -1,0 +1,12 @@
+# build & deps
+.next/
+node_modules/
+dist/
+
+# env
+.env*
+!.env.example
+
+# misc
+.vscode/
+.DS_Store
