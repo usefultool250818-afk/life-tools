@@ -1,6 +1,6 @@
 // src/app/(site)/contact/page.tsx
 import type { Metadata } from "next";
-import { ContactForm } from "../../ContactForm"; // ← 大文字小文字まで一致
+import { ContactForm } from "./ContactForm"; // ← 大文字小文字まで一致
 
 export const metadata: Metadata = {
   title: "お問い合わせ | life-tools.jp",
