@@ -1,37 +1,33 @@
-// app/(site)/articles/[id]/page.tsx
+// src/app/(site)/articles/[id]/page.tsx
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import type { Metadata } from "next";
 import { client } from "@/lib/microcms";
 
-// 取得データの型（必要に応じて拡張）
 type Article = {
   id: string;
   title: string;
-  body: string; // テキストエリア（Markdown文字列）
+  body: string; // Markdown 文字列
   thumbnail?: { url: string; width?: number; height?: number };
 };
 
-// ※ 動的レンダリングを明示
+// 動的レンダリング（ISRせず常に最新を取りにいく）
 export const dynamic = "force-dynamic";
 
-// （任意）SEO: タイトルだけでも設定すると◎
-export async function generateMetadata({
-  params,
-}: {
-  params: { id: string };
-}): Promise<Metadata> {
-  const { data: article } = await client.get<Article>(`/articles/${params.id}`);
+// ── SEO（タイトルだけでも設定推奨）
+export async function generateMetadata(
+  { params }: { params: Promise<{ id: string }> }
+): Promise<Metadata> {
+  const { id } = await params;                         // ★ ここがポイント
+  const { data: article } = await client.get<Article>(`/articles/${id}`);
   return { title: article.title };
 }
 
-export default async function ArticleDetail({
-  params,
-}: {
-  params: { id: string };
-}) {
-  // axios なのでパスで呼び出し、ジェネリクスで型を渡す
-  const { data: article } = await client.get<Article>(`/articles/${params.id}`);
+export default async function ArticleDetail(
+  { params }: { params: Promise<{ id: string }> }
+) {
+  const { id } = await params;                         // ★ ここがポイント
+  const { data: article } = await client.get<Article>(`/articles/${id}`);
 
   return (
     <article className="prose prose-lg prose-slate max-w-3xl mx-auto px-4 py-8">
