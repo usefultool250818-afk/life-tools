@@ -39,8 +39,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/disclaimer" className="hover:text-indigo-600">
                 免責事項
               </Link>
-              {/* 後で実装予定の場合はコメントを外してください */}
-              {/* <Link href="/contact" className="hover:text-indigo-600">お問い合わせ</Link> */}
+              <Link href="/contact" className="hover:text-indigo-600">
+              お問い合わせ
+              </Link>
             </nav>
           </div>
         </footer>
