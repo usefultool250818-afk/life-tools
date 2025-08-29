@@ -49,8 +49,13 @@ export default function DisclaimerPage() {
 
       <h2>7. お問い合わせ</h2>
       <p>
-        本免責事項に関するお問い合わせは、<a href="mailto:info@life-tools.jp">info@life-tools.jp</a> までお願いいたします。
-      </p>
+        本免責事項に関するお問い合わせは、
+        <a href="/contact" className="text-indigo-600 underline hover:text-indigo-800">
+            お問い合わせフォーム
+        </a>
+        よりお願いいたします。
+    　</p>
+
     </div>
   );
 }

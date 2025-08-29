@@ -75,11 +75,15 @@ export default function PrivacyPolicyPage() {
         本ポリシーは予告なく改定することがあります。重要な変更がある場合は当ページで告知します。
       </p>
 
-      <h2>11. お問い合わせ窓口</h2>
+    　<h2>11. お問い合わせ窓口</h2>
       <p>
-        本ポリシーに関するお問い合わせは、<a href="mailto:info@life-tools.jp">info@life-tools.jp</a> までお願いいたします。
-        （後で /contact を実装予定の場合は、そのページへのリンクに差し替えてください）
+        本ポリシーに関するお問い合わせは、
+        <a href="/contact" className="text-indigo-600 underline hover:text-indigo-800">
+          お問い合わせフォーム
+        </a>
+        よりお願いいたします。
       </p>
+
     </div>
   );
 }
