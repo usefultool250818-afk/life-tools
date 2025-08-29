@@ -28,8 +28,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
 
-        <footer className="mt-20 border-t border-slate-200 bg-white/60 py-6 text-center text-sm text-slate-500">
-          &copy; {new Date().getFullYear()} life-tools.jp
+        {/* フッター */}
+        <footer className="mt-20 border-t border-slate-200 bg-white/60">
+          <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div>&copy; {new Date().getFullYear()} life-tools.jp</div>
+            <nav className="flex flex-wrap gap-4" aria-label="フッターナビゲーション">
+              <Link href="/privacy-policy" className="hover:text-indigo-600">
+                プライバシーポリシー
+              </Link>
+              <Link href="/disclaimer" className="hover:text-indigo-600">
+                免責事項
+              </Link>
+              {/* 後で実装予定の場合はコメントを外してください */}
+              {/* <Link href="/contact" className="hover:text-indigo-600">お問い合わせ</Link> */}
+            </nav>
+          </div>
         </footer>
       </body>
     </html>
