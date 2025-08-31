@@ -239,7 +239,7 @@ export default function CashflowPlanner() {
   // -------------------- UI --------------------
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
-      <header className="sticky top-0 z-10 bg-white/80 backdrop-blur border-b print:hidden">
+      <header className="sticky top-[var(--site-header-h)] z-40 bg-white/80 backdrop-blur border-b print:hidden">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <h1 className="text-xl sm:text-2xl font-bold">家計キャッシュフロープランナー</h1>
 
