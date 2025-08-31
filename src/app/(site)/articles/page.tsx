@@ -5,9 +5,9 @@ export default async function ArticlesPage() {
   const articles = res.data.contents;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       <h2 className="text-2xl font-bold">記事一覧</h2>
-      <div className="grid gap-3">
+      <div className="grid gap-2">
         {articles.map((a: any) => (
           <a key={a.id} href={`/articles/${a.id}`}
              className="block rounded-xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow-md">

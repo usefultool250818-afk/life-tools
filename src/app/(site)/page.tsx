@@ -24,7 +24,7 @@ export default async function Home() {
   // ツールは手動キュレーション（そのままでOK）
   const featuredTools = [
     { title: "キャッシュフロープランナー", href: "/tools/cashflow-planner", desc: "家計の未来を見える化" },
-    { title: "QRコード生成", href: "/tools/qr-generator", desc: "URLや文字列から即生成" },
+    { title: "老後資産シミュレーター", href: "/tools/rougo-shisan-simulator", desc: "老後の資産をシミュレーション" },
     { title: "文字数カウンター", href: "/tools/moji-counter", desc: "文章の長さを即確認" },
   ];
 
